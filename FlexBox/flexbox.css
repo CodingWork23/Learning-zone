@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.box-area {
+    width: 70%;
+    height: 500px;
+    margin-top: 50px;
+    border: 1px solid black;
+
+    display: flex;
+    /* flex-direction: row; */
+    align-items: flex-start;
+    
+
+
+    /* flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1em;                      für überschüssige Elemente */
+    
+}
+
+.box-1 {
+        /* übernemmt den verbleibenden Raum */
+    /* flex-grow: 1; */  
+        /* zieht sich schneller ein bei geringe Auflösung */
+    /* flex-shrink: 5; */
+        /* die Breite ändern */
+    /* flex-basis: 300px; */
+        /* die drei Befehle in einem */
+    /* flex: 1; */
+    align-self: center;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border: 5px solid crimson;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

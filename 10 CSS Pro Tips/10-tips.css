@@ -1,0 +1,31 @@
+i {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 200px;
+}
+
+.position-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.box {
+    background-color: black;
+    height: 200px;
+    width: 400px;
+}
+
+.clamp {
+    width: clamp(200px, 50%, 600px); /* Breite für angepasste Auflösung*/
+}
+
+.aspect {
+    width: 80%;
+    aspect-ratio: 16/9;
+}
