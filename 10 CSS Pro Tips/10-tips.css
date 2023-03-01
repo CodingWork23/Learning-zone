@@ -1,3 +1,7 @@
+:root {     /* wie man eine Variable schreibt in CSS */
+    --text-color: rgb(255, 0, 0);
+}
+
 i {
     border: 2px solid black;
     padding: 5px;
@@ -27,5 +31,31 @@ i {
 
 .aspect {
     width: 80%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 12/6;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    background-color: aqua;
+    color: black;
+    padding: 15px;
+}
+
+.button:hover {
+    background-color: rgb(78, 205, 255);
+}
+
+.button:active {
+    background-color: rgb(196, 255, 255);
+}
+
+.dropdown {
+    opacity: 0;
+    visibility: hidden;
+}
+
+button:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
 }
