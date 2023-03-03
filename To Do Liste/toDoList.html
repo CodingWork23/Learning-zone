@@ -15,7 +15,36 @@
             .page-content {
                 padding: 50px 200px;
             }
+
+            .demo-list-control {
+            width: 300px;
+            }
         </style>
+
+        <!-- Javastcipt -->
+        <link rel="stylesheet" href="toDoList.js">
+
+        <script>
+            function addTodo(){
+
+            todolist.innerHTML += `
+                <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                <i class="material-icons  mdl-list__item-avatar">label</i>
+                ${todofield.value}
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                    <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+                </label>
+                </span>
+            </li>
+            `;
+
+            todofield.value = '';
+
+            }
+        </script>
 
         <title>To Do Liste</title>
     </head>
@@ -51,17 +80,23 @@
                 <!-- Your content goes here -->
 
                 <!-- Simple Textfield -->
-            <form action="#">
+            <form onsubmit="addTodo(); return false;">
                 <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="sample1">
-                <label class="mdl-textfield__label" for="sample1">Text...</label>
+                <input class="mdl-textfield__input" type="text" id="todofield">
+                <label class="mdl-textfield__label" for="todofield">To do einfügen</label>
                 </div>
+                
                 <!-- Colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    Button
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Speichern
                 </button>
   
             </form>
+
+            <!-- Liste -->
+            <ul class="demo-list-control mdl-list" id="todolist">
+                
+            </ul>
   
             </div>
             </main>
