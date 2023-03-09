@@ -34,3 +34,28 @@ function celsiusToFahrenheit(x) {
 }
 
 console.log(result);
+
+
+
+function altersRechte(alter) {
+    let rechte;
+    if(alter >= 15) {
+        return rechte = 'Du darfst ein Führerschein machen.';
+    }
+    if(alter >= 16) {
+        return rechte = 'Du darfst wählen gehen.';
+    }
+    if(alter >= 18) {
+        return rechte = 'Du bist volljährig.';
+    } else {
+        return rechte = 'Du bist noch nicht volljährig.'
+    }
+}
+console.log(altersRechte(16));
+
+
+
+for (let i = 0; i < notebook.length; i++) {
+    const element = notebook[i];
+    console.log(element);
+}
