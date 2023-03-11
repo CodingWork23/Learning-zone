@@ -81,4 +81,4 @@ function colculate(a, b) {
     return result;
 }
 
-console.log(colculate(5, 6));
+// console.log(colculate(5, 6));
