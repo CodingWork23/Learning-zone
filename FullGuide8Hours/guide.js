@@ -47,3 +47,38 @@ ageOld += 1;
 
 console.log('Happy Birthday! You are', ageOld, 'years old');
 */
+
+
+// Math
+
+let x = 3.99;
+let y = 5;
+let z = -4
+let maximum;
+let minimum;
+
+// x = Math.round(x);   // runden
+// x = Math.floor(x);   // abrunden
+// x = Math.ceil(x);    // aufrunden
+// x = Math.pow(x, 2);  // hoch zwei (x²)
+// x = Math.sqrt(x);    // wurzeln
+// x = Math.abs(x);     // der weg zur 0
+// maximum = Math.max(x, y, z);  // maximum
+// minimum = Math.min(x, y, z);  // minimum
+// x = Math.PI;         // pi
+
+// console.log(x);
+
+
+function colculate(a, b) {
+    a = Math.pow(a, 2);
+    b = Math.pow(b, 2);
+
+    let ab = a + b;
+    result = Math.sqrt(ab);
+    result = Math.round(result);
+    
+    return result;
+}
+
+console.log(colculate(5, 6));
