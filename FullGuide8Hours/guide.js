@@ -2,19 +2,25 @@ console.clear;
 
 // console.log('hello world');
 // window.alert('i realy love pizza!'); // kleines Fenster
-
+/*
 let firstName = 'Bro';
 let age = 21;
-let student = true;
+let student = true;*/
 
 // console.log('hello', firstName);
 // console.log('You are', age, 'years old');
 // console.log('Enrolled:', student);
 
 // document.getElementById('id').innerHTML = 
+/*
 document.getElementById('p1').innerHTML = 'Hello ' + firstName;
 document.getElementById('p2').innerHTML = 'You are ' + age + ' years old';
-document.getElementById('p3').innerHTML = 'Enrolled: ' + student;
+document.getElementById('p3').innerHTML = 'Enrolled: ' + student;*/
+
+
+
+
+
 
 
 
@@ -25,14 +31,20 @@ document.getElementById('p3').innerHTML = 'Enrolled: ' + student;
 //  let username = window.prompt('What´s your name?'); // kleines Fenster mit Angabe
 //  console.log(username);
 
-let username;
+// let username;
 // onclick = wenn geklickt
+/*
 document.getElementById('myButton').onclick = function() {
 
     username = document.getElementById('myText').value;
     console.log(username);
     document.getElementById('myLabel').innerHTML = 'Hello ' + username + ' !'
-};
+};*/
+
+
+
+
+
 
 
 
@@ -49,13 +61,20 @@ console.log('Happy Birthday! You are', ageOld, 'years old');
 */
 
 
-// Math
 
+
+
+
+
+
+
+// Math
+/*
 let x = 3.99;
 let y = 5;
 let z = -4
 let maximum;
-let minimum;
+let minimum;*/
 
 // x = Math.round(x);   // runden
 // x = Math.floor(x);   // abrunden
@@ -69,7 +88,7 @@ let minimum;
 
 // console.log(x);
 
-
+/*
 function colculate(a, b) {
     a = Math.pow(a, 2);
     b = Math.pow(b, 2);
@@ -79,6 +98,61 @@ function colculate(a, b) {
     result = Math.round(result);
     
     return result;
-}
+}*/
 
 // console.log(colculate(5, 6));
+
+
+
+
+
+
+
+// Counter
+
+let count = 0;
+
+document.getElementById('decreaseBtn').onclick = function(){
+    count -= 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('resetBtn').onclick = function(){
+    count = 0;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('increaseBtn').onclick = function(){
+    count += 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+
+
+
+
+
+// random number generator
+
+document.getElementById('rollButton').onclick = function() {
+    document.getElementById('xlabel').innerHTML = Math.floor(Math.random() * 20) + 1;
+    document.getElementById('ylabel').innerHTML = Math.floor(Math.random() * 20) + 1;
+    document.getElementById('zlabel').innerHTML = Math.floor(Math.random() * 20) + 1;
+}
+
+
+
+
+// useful string properties & methods
+
+let username = 'Bro Code';
+
+// console.log(username.length); // wieviele Zeichen es hat
+// console.log(username.charAt(0)); // welcher Buchstabe es ist
+// console.log(username.indexOf('o')); // wo der Buchstabe ist
+// console.log(username.lastIndexOf('o')); // wo der letzte Buchstabe ist
+// username = username.trim(); // entfernt Leerzeichen vor und nach
+// username = username.toUpperCase(); // setzt Buchstaben groß
+// username = username.toLowerCase(); // setzt Buchstaben klein
+
+console.log(username);
