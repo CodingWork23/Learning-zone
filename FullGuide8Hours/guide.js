@@ -143,9 +143,13 @@ document.getElementById('rollButton').onclick = function() {
 
 
 
+
+
+
 // useful string properties & methods
 
 let username = 'Bro Code';
+let phonenumber = '123-456-7890'
 
 // console.log(username.length); // wieviele Zeichen es hat
 // console.log(username.charAt(0)); // welcher Buchstabe es ist
@@ -155,4 +159,43 @@ let username = 'Bro Code';
 // username = username.toUpperCase(); // setzt Buchstaben groß
 // username = username.toLowerCase(); // setzt Buchstaben klein
 
-console.log(username);
+phonenumber = phonenumber.replaceAll('-', '/'); // ersetzt Zeichen
+
+// console.log(phonenumber);
+
+
+
+
+
+
+
+// slice = Texte schneiden ohne den Variabel zu verändern
+
+let fullname = 'Bro Code';
+let firstname;
+let lastname;
+
+// slice() --> wählt nur bestimmte Bereiche in einem Text aus
+// firstname = fullname.slice(0, 3);
+// lastname = fullname.slice(4);
+
+//indexOf('') --> sucht bestimmte Zeichen
+firstname = fullname.slice(0, fullname.indexOf(' '));
+lastname = fullname.slice(fullname.indexOf(' ') + 1);
+
+// console.log(firstname);
+
+
+
+
+
+
+
+// method chaining = Elemente abrufen nacheinander in einer Zeile Code
+
+let userName = 'bro';
+
+let letter = username.charAt(0).toUpperCase();
+// letter = letter.toUpperCase();
+
+console.log(letter);
