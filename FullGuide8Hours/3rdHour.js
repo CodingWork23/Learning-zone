@@ -141,6 +141,80 @@ nahrungsListe[0][0] = 'apple'
 
 for(let nahrung of nahrungsListe) {
     for(let eat of nahrung) {
-        console.log(eat);
+        // console.log(eat);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+// ...
+/*
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let maximum = Math.max(...numbers); // die ganzen Elemente im Array nennen
+console.log(maximum);
+*/
+
+
+
+
+
+
+
+
+
+
+// rest parameters
+
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
+let e = 5;
+
+console.log(sum(a, b, e));
+
+function sum(...numbers) {
+    let total = 0;
+    for(let number of numbers) {
+        total += number;
+    }
+    return total;
+}
+
+//function sum(x, y, ...numbers)  ist auch möglich
+
+
+
+
+
+
+
+
+
+
+
+// callback
+
+summe(2, 3, displayConsole);
+
+function summe(x, y, callback) {
+    let result = x + y;
+    callback(result);
+}
+
+function displayConsole(output) {
+    console.log(output);
+}
+
+function displayDOM(output) {
+    document.getElementById('myLabel').innerHTML = output;
 }
