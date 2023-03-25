@@ -70,7 +70,7 @@ function toFahrenheit(temp) {
 
 
 // array
-
+/*
 let fruits = ['apple', 'orange', 'banana'];
 
 // fruits[0] = 'coconut';      // Element ausgetauscht
@@ -84,7 +84,7 @@ let lenght = fruits.length; // gibt die Anzahl der Elemente an
 let index = fruits.indexOf('apple') // sucht wo das Element ist
 
 // console.log(index);
-
+*/
 
 
 let prices = [5, 10, 15, 20];
@@ -98,4 +98,49 @@ for (let i = 0; i < prices.length; i++) {
 
 for(let i of prices) {
     console.log(i);
+}
+
+
+
+
+
+
+
+
+
+
+// array strings sortieren
+
+/*
+let fruits = ['banana', 'apple', 'kiwi', 'mango'];
+
+// fruits = fruits.sort();              // nach Alphabet sortieren
+fruits = fruits.sort().reverse();       // nach Alphabet sortieren (umgekehrt)
+
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+*/
+
+
+
+
+
+
+
+
+// 2D array
+
+let fruits =        ['mango', 'banana', 'kiwi', 'orange'];
+let vegetables =    ['carrot', 'peaper', 'salad'];
+let meats =         ['cow', 'sheap', 'pic', 'rabit'];
+
+let nahrungsListe = [fruits, vegetables, meats];
+
+nahrungsListe[0][0] = 'apple'
+
+for(let nahrung of nahrungsListe) {
+    for(let eat of nahrung) {
+        console.log(eat);
+    }
 }
