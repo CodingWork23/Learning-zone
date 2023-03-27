@@ -86,20 +86,20 @@ let index = fruits.indexOf('apple') // sucht wo das Element ist
 // console.log(index);
 */
 
-
+/*
 let prices = [5, 10, 15, 20];
 
-/*
+
 for (let i = 0; i < prices.length; i++) {
     console.log(prices[i]);
     
 }
-*/
+
 
 for(let i of prices) {
     console.log(i);
 }
-
+*/
 
 
 
@@ -218,3 +218,205 @@ function displayConsole(output) {
 function displayDOM(output) {
     document.getElementById('myLabel').innerHTML = output;
 }
+
+
+
+
+
+
+
+
+
+
+// array.forEach() --> ruft jedes Element von einem Array auf
+/*
+let students = ['vowa', 'andree', 'sergej', 'victor'];
+students.forEach(capitalalize);
+students.forEach(print);
+
+function capitalalize(element, index, array) {
+    array[index] = element[0].toUpperCase() + element.substring(1);
+}
+
+function print(element) {
+    console.log(element)
+}
+*/
+
+
+
+
+
+
+
+console.log(' ');
+
+// array.map() --> ruft jeden Element von einem Array auf und erzeugt einen neuen Array
+
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(square);
+let cubes = numbers.map(cube);
+
+squares.forEach(print);
+cubes.forEach(print);
+
+function square(element) {
+    return Math.pow(element, 2);
+}
+
+function cube(element) {
+    return Math.pow(element, 3);
+}
+
+function print(element) {
+console.log(element);
+}
+
+console.log(...squares);
+
+
+
+
+
+
+
+
+
+
+console.log(' ');
+
+// array.filter() --> erzeugt ein neues Array mit den Elementen die dem Bedingungen zustimmen
+
+let ages = [18, 16, 17, 21, 80];
+let adults = ages.filter(checkAge);
+
+adults.forEach(print);
+
+function checkAge(element) {
+    return element >= 18;
+}
+
+function print(element) {
+    console.log(element);
+}
+
+
+
+
+
+
+
+
+
+
+
+// array.reduce() --> setzt ein Array zu einem einzigen Wert (funktioniert wie forEach())
+
+let prices  = [12, 21, 30, 8, 50];
+let total = prices.reduce(checkOut);
+
+console.log(`The total is: $${total}`);
+
+function checkOut(total, element) {
+    return total + element;
+}
+
+
+
+
+
+
+
+
+
+console.log(' ');
+
+
+// Zahlen sortieren im Array
+
+let grades = [100, 50, 45, 75, 25, 67];
+
+grades = grades.sort(descendingSort);
+
+console.log(grades);
+
+function descendingSort(x, y) {
+    return x - y
+}
+
+
+
+
+
+
+
+
+
+
+
+console.log(' ');
+
+// function(unbenannt)
+
+const greeting = function() {
+    console.log('Hello');
+}
+
+greeting();
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(' ');
+
+// arrow function
+
+/*
+ const greet = (username) => console.log(`Hello ${username}`)
+
+ greet('gandon');
+ */
+
+ const percent = (x, y) =>  x / y * 100;
+
+ console.log(`${percent(75, 100)}%`);
+
+
+
+
+
+
+
+
+
+
+
+
+ // im Array die Elemente vermischen
+
+ let cards = ['A', '6', '7', 'K', 'Q'];
+
+ shuffle(cards);
+
+ console.log(...cards);
+
+ function shuffle(array) {
+    let currentIndex = array.length;
+
+    while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * array.length);
+        currentIndex -= 1;
+
+        let temp = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temp;
+    }
+ }
